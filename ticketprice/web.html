@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Airline Ticket Price Calculator</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f0f0f0;
+      }
+      .container {
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: left;
+      }
+      .container h1 {
+        text-align: center;
+      }
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+      }
+      .form-group label {
+        margin-bottom: 5px;
+      }
+      .form-group input,
+      .form-group select {
+        padding: 10px;
+        font-size: 1em;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 1em;
+        cursor: pointer;
+      }
+      #total-price {
+        text-align: center;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Airline Ticket Price Calculator</h1>
+      <form id="ticket-form">
+        <div class="form-group">
+          <label for="departure-city">Departure City:</label>
+          <select id="departure-city">
+            <option value="DXB">Dubai</option>
+            <option value="AUH">Abu Dhabi</option>
+            <option value="RAK">Ras Al Khaimah</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="destination-city">Destination City:</label>
+          <select id="destination-city">
+            <option value="GOI">Goa</option>
+            <option value="MAD">Spain</option>
+            <option value="LON">London</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="passenger-count">Passenger Count:</label>
+          <input type="number" id="passenger-count" min="1" value="1" />
+        </div>
+        <button type="button" onclick="calculatePrice()">
+          Calculate Price
+        </button>
+      </form>
+      <h2 id="total-price">Total Price: $0</h2>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
