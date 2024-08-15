@@ -1,0 +1,90 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #89f7fe, #66a6ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+/* Container Styles */
+.container {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Title Styles */
+h1 {
+    margin-bottom: 30px;
+    color: #0072ff;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+/* Input Styles */
+input {
+    padding: 14px 20px;
+    font-size: 16px;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    width: calc(100% - 40px);
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+input:focus {
+    border: 1px solid #0072ff;
+}
+
+/* Button Styles */
+button {
+    padding: 14px 30px;
+    font-size: 16px;
+    border-radius: 30px;
+    border: none;
+    background-color: #0072ff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 100%;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #005bb5;
+    transform: scale(1.05);
+}
+
+/* Weather Display Box Styles */
+#weatherDisplay {
+    margin-top: 30px;
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    color: #333;
+    text-align: left;
+}
+
+#weatherDisplay h2 {
+    margin-bottom: 10px;
+    color: #0072ff;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+#weatherDisplay p {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #555;
+}
