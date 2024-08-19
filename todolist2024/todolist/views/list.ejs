@@ -1,0 +1,44 @@
+<!-- list.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= listName %> - To-Do List</title>
+    <link rel="stylesheet" href="/list.css" />
+  </head>
+  <body>
+    <% if (list) { %>
+    <div id="todo-form">
+      <h1 style="text-align: center"><%= listName %></h1>
+      <form action="/addTask" method="post" class="formList">
+        <input
+          type="text"
+          id="new-todo"
+          name="task"
+          placeholder="Enter new to-do item"
+          required
+        />
+        <input type="hidden" name="listName" value="<%= listName %>" />
+        <button type="submit" class="listSubmit">Add</button>
+      </form>
+      <ul style="list-style-type: none">
+        <% list.forEach((task, index) => { %>
+        <li>
+          <form action="/deleteTask" method="post" style="display: inline">
+            <input type="hidden" name="taskId" value="<%= index %>" />
+            <input type="hidden" name="listName" value="<%= listName %>" />
+            <input type="checkbox" <%= task.completed ? 'checked' : '' %> />
+            <span><%= task.task %></span>
+            <button type="submit">Delete</button>
+          </form>
+        </li>
+        <% }); %>
+      </ul>
+      <form action="/back" method="post">
+        <button type="submit" class="listSubmit">Back</button>
+      </form>
+    </div>
+    <% } %>
+  </body>
+</html>
